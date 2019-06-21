@@ -48,7 +48,7 @@ would likely be part of a true implementation:
 * Potential overflow is ignored, but noted
 * Scale is assumed to be small enough to be handled within a single application
   * I had to fight my background in "big data" big time
-* If "web scale" were desired, the implementation for Tracker could include a numer of improvements
+* If "web scale" were desired, the implementation for Tracker could include a number of improvements
   * Sharding of keys (actions) into separate maps with separate mutexes to minimize waiting on locks
   * Clustering of multiple instances to support a large number of distinct actions
-  * A map/reduce style approach to storing events to scale writes to a single action type
+  * A map/reduce style approach to storing events in order to scale writes and calculations for a particular action type
